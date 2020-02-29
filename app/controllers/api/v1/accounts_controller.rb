@@ -1,4 +1,4 @@
-class AccountsController < ApplicationController
+class Api::V1::AccountsController < ApplicationController
   before_action :set_account, only: [:show, :destroy, :update]
     def index
       @accounts = Account.all.order(created_at: :desc)
@@ -23,10 +23,21 @@ class AccountsController < ApplicationController
       @account.destroy
       head :no_content
     end
+    def logged_in
+      if @current_user
+        render json: {
+          logged_in: true,
+          user: @current_user
+        }
+      else
+        render json: {
+          logged_in: false
+        }
+    end
 
 private
   def account_params
-    params.permit(:name, :bank, :acc_no, :category)
+    params.permit(:name, :bank, :acc_no, :category, :user_id)
   end
 
   def set_account
