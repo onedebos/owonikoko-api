@@ -10,7 +10,7 @@ Account.create!(
     name: 'test',
     bank: 'test',
     acc_no:'309039309',
-    category:'yes'
+    category:'yes',
     user_id:1
 )
 
