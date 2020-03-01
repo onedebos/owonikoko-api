@@ -34,7 +34,7 @@ class Api::V1::AccountsController < ApplicationController
           logged_in: false
         }
     end
-
+  end
 private
   def account_params
     params.permit(:name, :bank, :acc_no, :category, :user_id)
@@ -43,5 +43,5 @@ private
   def set_account
     @account = Account.find(params[:id])
   end
-
 end
+
