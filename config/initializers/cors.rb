@@ -13,4 +13,12 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     ],
     credentials: true
   end
+
+  allow do
+    origins "https://kind-edison-586550.netlify.com"
+    resource "*", headers: :any, methods: [
+        :get, :post, :put, :patch, :delete, :options, :head
+    ],
+    credentials: true
+  end
 end
