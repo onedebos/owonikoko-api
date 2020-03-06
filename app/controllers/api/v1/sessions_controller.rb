@@ -35,7 +35,7 @@ class Api::V1::SessionsController < ApplicationController
           errors: "No user logged in"
         }
       end
-    end
+    endc
   
     def logout
       reset_session

@@ -23,18 +23,7 @@ class Api::V1::AccountsController < ApplicationController
       @account.destroy
       head :no_content
     end
-  #   def logged_in
-  #     if @current_user
-  #       render json: {
-  #         logged_in: true,
-  #         user: @current_user
-  #       }
-  #     else
-  #       render json: {
-  #         logged_in: false
-  #       }
-  #   end
-  # end
+
 private
   def account_params
     params.permit(:name, :bank, :acc_no, :category, :user_id)
