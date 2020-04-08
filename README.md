@@ -52,66 +52,11 @@ bundle install
 ```
 rails s -p 3001
 ```
+### Automated Tests
+- Currently, there are no automated tests avaailable for this project. This will be implemented at a later date.
 
-- If you decide to run the server locally, cd into the frontend repo. Navigate to src/components/helper/apiUrl.js and change the API_URL string to
-
-```
-http://localhost:3001
-```
-
-- run
-
-```
-npm install
-```
-
-to install all packages. then
-
-````
-npm start
-```# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-- to start the app in the browser.
-
-### Prerequisites
-
-- Make sure to have Rails 6.0 and Ruby 2.5.1
-
-### Install
-
-Install the Ruby Gems required by rails
-
-````
-
-bundle install
-
-```
-
-### Deployment
+### Planned Features
+- An endpoint to search through user data.
 
 ## Authors
 
